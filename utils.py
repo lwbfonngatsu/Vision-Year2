@@ -8,10 +8,6 @@ import sys
 import logging
 import shutil
 
-
-###############################################################################
-# Used For Facial Tracking and Traning in OpenCV
-
 def read_images_from_single_face_profile(face_profile, face_profile_name_index, dim = (50, 50)):
     """
     Reads all the images from one specified face profile into ndarrays

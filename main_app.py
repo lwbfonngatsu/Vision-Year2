@@ -13,9 +13,6 @@ import warnings
 
 print(__doc__)
 
-###############################################################################
-# Building SVC from database
-
 FACE_DIM = (50,50) # h = 50, w = 50
 
 # Load training data from face_profiles/
@@ -25,11 +22,6 @@ print ("\n", face_profile_name_index.shape[0], " samples from ", len(face_profil
 
 # Build the classifier
 clf, pca = svm.build_SVC(face_profile_data, face_profile_name_index, FACE_DIM)
-
-
-###############################################################################
-# Facial Recognition In Live Tracking
-
 
 DISPLAY_FACE_DIM = (200, 200) # the displayed video stream screen dimention
 SKIP_FRAME = 2      # the fixed skip frame
