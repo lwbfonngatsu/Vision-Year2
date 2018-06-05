@@ -277,7 +277,7 @@ def predict(clf, pca, img, face_profile_names):
 
     img = img.ravel()
     # Apply dimentionality reduction on img, img is projected on the first principal components previous extracted from the Yale Extended dataset B.
-    principle_components = pca.transform(img)
+    principle_components = pca.transform([img])
     pred = clf.predict(principle_components)
     name = face_profile_names[pred]
     return name
